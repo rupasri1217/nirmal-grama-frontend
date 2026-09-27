@@ -774,7 +774,7 @@ if (logoutBtn) {
 
 
         window.location.href =
-            "../../Home/index.html";
+            "../../index.html";
 
     });
 

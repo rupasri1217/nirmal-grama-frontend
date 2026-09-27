@@ -1,0 +1,346 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Nirmal Grama - Track Complaint</title> 
+ 
+    <link rel="stylesheet" href="track.css"> 
+</head> 
+ 
+<body> 
+ 
+    <!-- ======================================== 
+         HEADER 
+    ======================================== --> 
+ 
+    <header class="header"> 
+ 
+        <div class="logo-section"> 
+ 
+            <img src="../../images/logo-icon.png" alt="Nirmal Grama Logo"> 
+ 
+            <div> 
+                <h1>Nirmal Grama</h1> 
+                <p data-en="Public Grievance Portal" 
+                   data-te="ప్రజా ఫిర్యాదుల పోర్టల్"> 
+                    Public Grievance Portal 
+                </p> 
+            </div> 
+ 
+        </div> 
+ 
+        <div class="header-actions"> 
+ 
+            <button id="languageBtn" class="language-btn"> 
+                తెలుగు 
+            </button> 
+ 
+            <button id="backBtn" class="back-btn" 
+                    data-en="Back to Dashboard" 
+                    data-te="డాష్‌బోర్డ్‌కు తిరిగి వెళ్ళండి"> 
+                Back to Dashboard 
+            </button> 
+ 
+        </div> 
+ 
+    </header> 
+ 
+ 
+    <!-- ======================================== 
+         MAIN 
+    ======================================== --> 
+ 
+    <main class="track-container"> 
+ 
+        <!-- PAGE HEADING --> 
+ 
+        <section class="page-heading"> 
+ 
+            <h2 data-en="Track Your Complaint" 
+                data-te="మీ ఫిర్యాదును ట్రాక్ చేయండి"> 
+                Track Your Complaint 
+            </h2> 
+ 
+            <p data-en="Check the current status of your complaint" 
+               data-te="మీ ఫిర్యాదు ప్రస్తుత స్థితిని తెలుసుకోండి"> 
+                Check the current status of your complaint 
+            </p> 
+ 
+        </section> 
+ 
+ 
+        <!-- ======================================== 
+             COMPLAINT ID SEARCH 
+        ======================================== --> 
+ 
+        <section class="search-card"> 
+ 
+            <div class="step-title"> 
+ 
+                <div class="step-number"> 
+                    1 
+                </div> 
+ 
+                <div> 
+                    <h3 data-en="Track by Complaint ID" 
+                        data-te="ఫిర్యాదు ID ద్వారా ట్రాక్ చేయండి"> 
+                        Track by Complaint ID 
+                    </h3> 
+ 
+                    <p data-en="Enter the ID given after submitting your complaint" 
+                       data-te="ఫిర్యాదు చేసిన తర్వాత ఇచ్చిన IDని నమోదు చేయండి"> 
+                        Enter the ID given after submitting your complaint 
+                    </p> 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <div class="search-box"> 
+ 
+                <input 
+                    type="text" 
+                    id="complaintIdInput" 
+                    placeholder="Example: NG-2026-00001" 
+                    autocomplete="off" 
+                > 
+ 
+                <button id="trackButton" 
+                        class="track-button" 
+                        data-en="Track Complaint" 
+                        data-te="ఫిర్యాదును ట్రాక్ చేయండి"> 
+                    Track Complaint 
+                </button> 
+ 
+            </div> 
+ 
+            <p id="searchMessage" class="search-message"></p> 
+ 
+        </section> 
+ 
+ 
+        <!-- ======================================== 
+             COMPLAINT DETAILS 
+        ======================================== --> 
+ 
+        <section id="complaintDetails" class="complaint-details"> 
+ 
+            <div class="details-header"> 
+ 
+                <div> 
+                    <p class="small-label" 
+                       data-en="Complaint ID" 
+                       data-te="ఫిర్యాదు ID"> 
+                        Complaint ID 
+                    </p> 
+ 
+                    <h2 id="displayComplaintId"> 
+                        -- 
+                    </h2> 
+                </div> 
+ 
+                <div id="statusBadge" class="status-badge"> 
+                    Pending 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <!-- STATUS TRACKER --> 
+ 
+            <div class="status-section"> 
+ 
+                <h3 data-en="Complaint Status" 
+                    data-te="ఫిర్యాదు స్థితి"> 
+                    Complaint Status 
+                </h3> 
+ 
+ 
+                <div class="status-tracker"> 
+ 
+                    <div class="status-line"></div> 
+ 
+ 
+                    <div class="status-step completed"> 
+ 
+                        <div class="status-circle"> 
+                            ✓ 
+                        </div> 
+ 
+                        <p data-en="Submitted" 
+                           data-te="సమర్పించబడింది"> 
+                            Submitted 
+                        </p> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="status-step" id="pendingStep"> 
+ 
+                        <div class="status-circle"> 
+                            2 
+                        </div> 
+ 
+                        <p data-en="Pending" 
+                           data-te="పెండింగ్"> 
+                            Pending 
+                        </p> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="status-step" id="progressStep"> 
+ 
+                        <div class="status-circle"> 
+                            3 
+                        </div> 
+ 
+                        <p data-en="In Progress" 
+                           data-te="పురోగతిలో ఉంది"> 
+                            In Progress 
+                        </p> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="status-step" id="resolvedStep"> 
+ 
+                        <div class="status-circle"> 
+                            4 
+                        </div> 
+ 
+                        <p data-en="Resolved" 
+                           data-te="పరిష్కరించబడింది"> 
+                            Resolved 
+                        </p> 
+ 
+                    </div> 
+
+
+                    <!-- REJECTED STATUS -->
+
+                    <div class="status-step" id="rejectedStep"> 
+ 
+                        <div class="status-circle"> 
+                            ✕
+                        </div> 
+ 
+                        <p data-en="Rejected" 
+                           data-te="తిరస్కరించబడింది"> 
+                            Rejected 
+                        </p> 
+ 
+                    </div>
+ 
+                </div> 
+ 
+            </div> 
+ 
+ 
+            <!-- COMPLAINT INFORMATION --> 
+ 
+            <div class="information-section"> 
+ 
+                <h3 data-en="Complaint Details" 
+                    data-te="ఫిర్యాదు వివరాలు"> 
+                    Complaint Details 
+                </h3> 
+ 
+ 
+                <div class="info-grid"> 
+ 
+                    <div class="info-item"> 
+ 
+                        <span data-en="Category" 
+                              data-te="వర్గం"> 
+                            Category 
+                        </span> 
+ 
+                        <strong id="complaintCategory"> 
+                            -- 
+                        </strong> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="info-item"> 
+ 
+                        <span data-en="Date" 
+                              data-te="తేదీ"> 
+                            Date 
+                        </span> 
+ 
+                        <strong id="complaintDate"> 
+                            -- 
+                        </strong> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="info-item full-width"> 
+ 
+                        <span data-en="Description" 
+                              data-te="వివరణ"> 
+                            Description 
+                        </span> 
+ 
+                        <strong id="complaintDescription"> 
+                            -- 
+                        </strong> 
+ 
+                    </div> 
+ 
+ 
+                    <div class="info-item full-width"> 
+ 
+                        <span data-en="Location" 
+                              data-te="స్థానం"> 
+                            Location 
+                        </span> 
+ 
+                        <strong id="complaintLocation"> 
+                            -- 
+                        </strong> 
+ 
+                    </div> 
+ 
+                </div> 
+ 
+            </div> 
+ 
+        </section> 
+ 
+ 
+        <!-- ======================================== 
+             NO COMPLAINT 
+        ======================================== --> 
+ 
+        <section id="emptyState" class="empty-state"> 
+ 
+            <div class="empty-icon"> 
+                🔎 
+            </div> 
+ 
+            <h3 data-en="No Complaint Selected" 
+                data-te="ఫిర్యాదు ఎంచుకోబడలేదు"> 
+                No Complaint Selected 
+            </h3> 
+ 
+            <p data-en="Enter a Complaint ID above to view its status." 
+               data-te="దాని స్థితిని చూడటానికి పైన ఫిర్యాదు IDని నమోదు చేయండి"> 
+                Enter a Complaint ID above to view its status. 
+            </p> 
+ 
+        </section> 
+ 
+    </main> 
+ 
+ 
+    <script src="track.js"></script> 
+ 
+</body> 
+ 
+</html>

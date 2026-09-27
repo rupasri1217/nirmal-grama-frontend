@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nirmal Grama | Verify Complaint</title>
+
+    <link rel="stylesheet"
+          href="verify.css">
+
+</head>
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+========================================= -->
+
+<header class="verify-header">
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <img src="../../images/logo-icon.png"
+             alt="Nirmal Grama Logo">
+
+        <div>
+
+            <h1>Nirmal Grama</h1>
+
+            <p>Officer Complaint Verification</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICER DETAILS -->
+
+    <div class="header-right">
+
+        <span id="officerName">
+            Officer
+        </span>
+
+        <span id="officerArea">
+            Assigned Area
+        </span>
+
+    </div>
+
+</header>
+
+
+
+<!-- ========================================
+     MAIN CONTENT
+========================================= -->
+
+<main class="verify-container">
+
+
+    <!-- PAGE HEADING -->
+
+    <section class="page-heading">
+
+        <div>
+
+            <h2>
+                Verify Complaint
+            </h2>
+
+            <p>
+                Review the complaint details before taking action.
+            </p>
+
+        </div>
+
+
+        <button
+            class="back-btn"
+            id="backBtn">
+
+            ← Back to Dashboard
+
+        </button>
+
+    </section>
+
+
+
+    <!-- ====================================
+         COMPLAINT CARD
+    ===================================== -->
+
+    <section class="complaint-details-card">
+
+
+        <!-- COMPLAINT HEADER -->
+
+        <div class="complaint-header">
+
+            <div>
+
+                <span class="label">
+                    Complaint ID
+                </span>
+
+                <h3 id="complaintId">
+                    Loading...
+                </h3>
+
+            </div>
+
+
+            <span
+                class="status-badge"
+                id="complaintStatus">
+
+                Pending
+
+            </span>
+
+        </div>
+
+
+
+        <!-- BASIC INFORMATION -->
+
+        <div class="details-grid">
+
+            <div class="detail-item">
+
+                <span class="label">
+                    Category
+                </span>
+
+                <p id="complaintCategory">
+                    —
+                </p>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span class="label">
+                    Date
+                </span>
+
+                <p id="complaintDate">
+                    —
+                </p>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span class="label">
+                    Citizen Mobile
+                </span>
+
+                <p id="citizenMobile">
+                    —
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DESCRIPTION -->
+
+        <div class="detail-section">
+
+            <span class="label">
+                Complaint Description
+            </span>
+
+            <div
+                class="description-box"
+                id="complaintDescription">
+
+                —
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LOCATION -->
+
+        <div class="detail-section">
+
+            <span class="label">
+                Complaint Location
+            </span>
+
+
+            <div class="location-box">
+
+               <div>
+                <span>Village</span>
+                <p id="village"></p>
+                </div>
+
+                <div>
+                <span>Location</span>
+                <p id="location"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHOTO -->
+
+        <div
+            class="detail-section"
+            id="photoSection">
+
+            <span class="label">
+                Complaint Photo
+            </span>
+
+
+            <div class="photo-container">
+
+                <img
+                    id="complaintPhoto"
+                    alt="Complaint Photo">
+
+
+                <p id="noPhoto">
+                    No photo was attached to this complaint.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             ACTIONS
+        ================================== -->
+
+        <div class="action-section">
+
+            <h3>
+                Officer Action
+            </h3>
+
+
+            <p id="actionDescription">
+                Please review all the information before
+                verifying or rejecting this complaint.
+            </p>
+
+
+            <div class="action-buttons">
+
+
+                <!-- REJECT -->
+
+                <button
+                    class="reject-btn"
+                    id="rejectBtn">
+
+                    ✕ Reject Complaint
+
+                </button>
+
+
+                <!-- VERIFY -->
+
+                <button
+                    class="verify-btn"
+                    id="verifyBtn">
+
+                    ✓ Verify Complaint
+
+                </button>
+
+
+                <!-- RESOLVE -->
+
+                <button
+                    class="resolve-btn"
+                    id="resolveBtn"
+                    style="display: none;">
+
+                    ✓ Mark Complaint as Resolved
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ========================================
+     NOTIFICATION
+========================================= -->
+
+<div
+    class="notification"
+    id="notification">
+
+    <span id="notificationMessage">
+        Notification
+    </span>
+
+</div>
+
+
+
+<script src="verify.js"></script>
+
+</body>
+
+</html>

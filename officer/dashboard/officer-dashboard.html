@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nirmal Grama | Officer Dashboard</title>
+
+    <link rel="stylesheet"
+          href="officer-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     HEADER
+========================================= -->
+
+<header class="dashboard-header">
+
+    <!-- LOGO -->
+
+    <div class="logo-section">
+
+        <img src="../../images/logo-icon.png"
+             alt="Nirmal Grama Logo">
+
+        <div>
+
+            <h1>Nirmal Grama</h1>
+
+            <p>Officer Dashboard</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- HEADER ACTIONS -->
+
+    <div class="header-actions">
+
+        <button id="logoutBtn"
+                class="logout-btn">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ========================================
+     MAIN DASHBOARD
+========================================= -->
+
+<main class="dashboard-container">
+
+
+    <!-- ========================================
+         WELCOME SECTION
+    ========================================= -->
+
+    <section class="welcome-section">
+
+        <div>
+
+            <p class="welcome-label">
+                Welcome back
+            </p>
+
+
+            <h2 id="officerName">
+                Officer
+            </h2>
+
+
+            <p>
+                Manage and resolve citizen complaints
+            </p>
+
+        </div>
+
+
+        <div class="area-info">
+
+            <span>
+                Assigned Area
+            </span>
+
+
+            <strong id="officerArea">
+                Guntur
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         DASHBOARD TITLE
+    ========================================= -->
+
+    <section class="section-heading">
+
+        <h2>
+            Complaint Overview
+        </h2>
+
+
+        <p>
+            View complaints based on their current status
+        </p>
+
+    </section>
+
+
+
+    <!-- ========================================
+         STATUS CARDS
+    ========================================= -->
+
+    <section class="status-cards">
+
+
+        <!-- TOTAL -->
+
+        <div class="status-card"
+             data-status="Total"
+             id="totalCard">
+
+            <div class="status-icon">
+                📋
+            </div>
+
+
+            <div class="status-card-content">
+
+                <span>
+                    Total Complaints
+                </span>
+
+
+                <strong id="totalCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PENDING -->
+
+        <div class="status-card"
+             data-status="Pending"
+             id="pendingCard">
+
+            <div class="status-icon">
+                ⏳
+            </div>
+
+
+            <div class="status-card-content">
+
+                <span>
+                    Pending
+                </span>
+
+
+                <strong id="pendingCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- IN PROGRESS -->
+
+        <div class="status-card"
+             data-status="In Progress"
+             id="progressCard">
+
+            <div class="status-icon">
+                🔧
+            </div>
+
+
+            <div class="status-card-content">
+
+                <span>
+                    In Progress
+                </span>
+
+
+                <strong id="progressCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RESOLVED -->
+
+        <div class="status-card"
+             data-status="Resolved"
+             id="resolvedCard">
+
+            <div class="status-icon">
+                ✓
+            </div>
+
+
+            <div class="status-card-content">
+
+                <span>
+                    Resolved
+                </span>
+
+
+                <strong id="resolvedCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         CATEGORY SECTION
+    ========================================= -->
+
+    <section class="category-section">
+
+
+        <div class="section-heading">
+
+            <h2>
+                Complaints by Category
+            </h2>
+
+
+            <p>
+                Select a category to view related complaints
+            </p>
+
+        </div>
+
+
+
+        <div class="category-cards">
+
+
+            <!-- ROAD -->
+
+            <div class="category-card"
+                 data-category="Road"
+                 id="roadCategory">
+
+                <img src="../../images/roads.png"
+                     alt="Road">
+
+                <div>
+
+                    <h3>
+                        Road
+                    </h3>
+
+
+                    <span id="roadCount">
+                        0 complaints
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WATER -->
+
+            <div class="category-card"
+                 data-category="Water"
+                 id="waterCategory">
+
+                <img src="../../images/water.png"
+                     alt="Water">
+
+                <div>
+
+                    <h3>
+                        Water
+                    </h3>
+
+
+                    <span id="waterCount">
+                        0 complaints
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GARBAGE -->
+
+            <div class="category-card"
+                 data-category="Garbage"
+                 id="garbageCategory">
+
+                <img src="../../images/garbage.png"
+                     alt="Garbage">
+
+                <div>
+
+                    <h3>
+                        Garbage
+                    </h3>
+
+
+                    <span id="garbageCount">
+                        0 complaints
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STREET LIGHT -->
+
+            <div class="category-card"
+                 data-category="Street Light"
+                 id="streetLightCategory">
+
+                <img src="../../images/street-lights.png"
+                     alt="Street Light">
+
+                <div>
+
+                    <h3>
+                        Street Light
+                    </h3>
+
+
+                    <span id="streetLightCount">
+                        0 complaints
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OTHER -->
+
+            <div class="category-card"
+                 data-category="Other"
+                 id="otherCategory">
+
+                <div class="category-placeholder">
+                    ?
+                </div>
+
+                <div>
+
+                    <h3>
+                        Other
+                    </h3>
+
+
+                    <span id="otherCount">
+                        0 complaints
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         COMPLAINT LIST
+    ========================================= -->
+
+    <section class="complaints-section"
+             id="complaintsSection">
+
+
+        <div class="complaints-header">
+
+            <div>
+
+                <h2 id="complaintsTitle">
+                    All Complaints
+                </h2>
+
+
+                <p id="complaintsSubtitle">
+                    Complaints received from citizens
+                </p>
+
+            </div>
+
+
+            <button id="clearFilterBtn"
+                    class="clear-filter-btn">
+
+                Show All
+
+            </button>
+
+        </div>
+
+
+
+        <!-- COMPLAINT LIST -->
+
+        <div id="complaintsList"
+             class="complaints-list">
+
+            <!-- Complaint cards created by JavaScript -->
+
+        </div>
+
+
+
+        <!-- EMPTY STATE -->
+
+        <div id="emptyComplaints"
+             class="empty-complaints">
+
+            <div class="empty-icon">
+                📭
+            </div>
+
+
+            <h3>
+                No Complaints Found
+            </h3>
+
+
+            <p>
+                There are no complaints matching the selected filter.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+</main>
+
+
+
+<!-- ========================================
+     OLD COMPLAINT DETAILS MODAL
+     Kept for now so existing code is not
+     unnecessarily removed.
+========================================= -->
+
+<div id="complaintModal"
+     class="modal-overlay">
+
+
+    <div class="complaint-modal">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="small-label">
+                    Complaint Details
+                </p>
+
+
+                <h2 id="modalComplaintId">
+                    --
+                </h2>
+
+            </div>
+
+
+            <button id="closeModalBtn"
+                    class="close-modal-btn">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+
+        <!-- MODAL CONTENT -->
+
+        <div class="modal-content">
+
+
+            <div class="modal-status-row">
+
+                <span>
+                    Current Status
+                </span>
+
+
+                <strong id="modalStatus">
+                    Pending
+                </strong>
+
+            </div>
+
+
+
+            <div class="modal-info">
+
+                <span>
+                    Category
+                </span>
+
+
+                <strong id="modalCategory">
+                    --
+                </strong>
+
+            </div>
+
+
+
+            <div class="modal-info">
+
+                <span>
+                    Submitted On
+                </span>
+
+
+                <strong id="modalDate">
+                    --
+                </strong>
+
+            </div>
+
+
+
+            <div class="modal-info full-width">
+
+                <span>
+                    Description
+                </span>
+
+
+                <p id="modalDescription">
+                    --
+                </p>
+
+            </div>
+
+
+
+            <div class="modal-info full-width">
+
+                <span>
+                    Location
+                </span>
+
+
+                <p id="modalLocation">
+                    --
+                </p>
+
+            </div>
+
+
+
+            <div class="modal-info">
+
+                <span>
+                    Citizen Mobile
+                </span>
+
+
+                <strong id="modalCitizenMobile">
+                    --
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ========================================
+             OLD WORKFLOW
+        ========================================= -->
+
+        <div class="workflow-section">
+
+            <h3>
+                Complaint Resolution
+            </h3>
+
+
+            <p>
+                Follow the resolution process step by step.
+            </p>
+
+
+
+            <div class="workflow-steps">
+
+
+                <div class="workflow-step"
+                     id="verifyStep">
+
+                    <div class="workflow-number">
+                        1
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Verify Complaint
+                        </strong>
+
+                        <p>
+                            Check the complaint details and location.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="workflow-step"
+                     id="responsibleStep">
+
+                    <div class="workflow-number">
+                        2
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Assign Responsible Person
+                        </strong>
+
+                        <p>
+                            Identify the department or person responsible.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="workflow-step"
+                     id="contactStep">
+
+                    <div class="workflow-number">
+                        3
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Send Complaint Details
+                        </strong>
+
+                        <p>
+                            Notify the responsible person about the complaint.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="workflow-step"
+                     id="workStep">
+
+                    <div class="workflow-number">
+                        4
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Work Progress
+                        </strong>
+
+                        <p>
+                            Track whether the work has started and completed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="workflow-step"
+                     id="completionStep">
+
+                    <div class="workflow-number">
+                        5
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Verify Completion
+                        </strong>
+
+                        <p>
+                            Confirm that the reported work is actually completed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="workflow-actions">
+
+                <button id="verifyBtn"
+                        class="primary-action">
+
+                    Verify Complaint
+
+                </button>
+
+
+                <button id="assignBtn"
+                        class="secondary-action">
+
+                    Assign Responsible Person
+
+                </button>
+
+
+                <button id="sendDetailsBtn"
+                        class="secondary-action">
+
+                    Send Complaint Details
+
+                </button>
+
+
+                <button id="workStartedBtn"
+                        class="secondary-action">
+
+                    Work Started
+
+                </button>
+
+
+                <button id="workCompletedBtn"
+                        class="secondary-action">
+
+                    Work Completed
+
+                </button>
+
+
+                <button id="resolveBtn"
+                        class="resolve-action">
+
+                    Verify & Resolve Complaint
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="officer-dashboard.js"></script>
+
+</body>
+
+</html>

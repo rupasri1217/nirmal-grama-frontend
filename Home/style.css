@@ -1,0 +1,937 @@
+/* ========================================
+BASIC SETTINGS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* ========================================
+HEADER
+======================================== */
+
+.header {
+    height: 78px;
+    padding: 0 7%;
+    background-color: #006A6A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #E24E42;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.logo p {
+    color: white;
+    font-size: 11px;
+}
+
+/* HEADER BUTTONS */
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LANGUAGE DROPDOWN */
+
+.language-select {
+    border: 1px solid white;
+    background-color: white;
+    color: #006A6A;
+    padding: 9px 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+    min-width: 115px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-select:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+.language-select:focus {
+    outline: 2px solid #E9B000;
+    outline-offset: 2px;
+}
+
+/* LOGIN */
+
+.login-btn {
+    border: none;
+    background-color: #E9B000;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ========================================
+HERO
+======================================== */
+
+.hero {
+    position: relative;
+    max-width: none;
+    width: 100%;
+    min-height: 565px;
+    margin: 0;
+    padding: 75px 7%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    overflow: hidden;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 55%;
+}
+
+.welcome-tag {
+    display: inline-block;
+    background-color: #E9B000;
+    color: #000000;
+    padding: 6px 13px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: #006A6A;
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 500px;
+    color: #444444;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* REPORT */
+
+.report-btn {
+    background-color: #E24E42;
+    color: white;
+    border: none;
+    padding: 15px 23px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.report-btn .arrow {
+    margin-left: 8px;
+}
+
+/* TRACK */
+
+.track-btn {
+    background-color: #006A6A;
+    color: white;
+    border: 2px solid #006A6A;
+    padding: 13px 23px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ========================================
+HERO IMAGE
+======================================== */
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+.image-label {
+    position: absolute;
+    bottom: 25px;
+    left: 7%;
+    background-color: #006A6A;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.72);
+    z-index: 1;
+}
+
+/* ========================================
+PROBLEMS SECTION
+======================================== */
+
+.problems-section {
+    background-color: #006A6A;
+    padding: 65px 30px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: white;
+    font-size: 15px;
+}
+
+/* PROBLEM GRID */
+
+.problem-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* PROBLEM CARD */
+
+.problem-card {
+    background-color: white;
+    border-radius: 7px;
+    overflow: hidden;
+    border-bottom: 4px solid #EB6E80;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.problem-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.problem-image {
+    width: 100%;
+    height: 145px;
+    overflow: hidden;
+}
+
+.problem-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.problem-card h3 {
+    color: #000000;
+    padding: 13px 15px;
+    font-size: 17px;
+}
+/* ========================================
+BUTTON HOVER EFFECT
+======================================== */
+
+.language-select,
+.login-btn,
+.report-btn,
+.track-btn,
+.help-section button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-select:hover,
+.login-btn:hover,
+.report-btn:hover,
+.track-btn:hover,
+.help-section button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+/* ========================================
+HOW IT WORKS
+======================================== */
+
+.how-section {
+    background-color: #f5f5f5;
+    padding: 70px 30px;
+}
+
+.how-section .section-heading h2 {
+    color: #006A6A;
+}
+
+.how-section .section-heading p {
+    color: #555555;
+}
+
+/* STEPS */
+
+.steps {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* STEP CARD */
+
+.step-card {
+    background-color: white;
+    border: 0.5px solid #006A6A;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+
+    /* Soft card shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+    /* Smooth hover animation */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.step-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* NUMBER */
+
+.step-number {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #999999;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ICON */
+
+.step-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 15px;
+    background-color: #E9B000;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.step-card h3 {
+    color: #006A6A;
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.step-card p {
+    color: #555555;
+    font-size: 14px;
+}
+
+/* ========================================
+HELP SECTION
+======================================== */
+
+.help-section {
+    max-width: 1000px;
+    margin: 55px auto;
+    padding: 30px;
+    background-color: #EB6E80;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.help-section h2 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.help-section p {
+    color: white;
+    font-size: 14px;
+    max-width: 650px;
+}
+
+.help-section button {
+    background-color: #E24E42;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer {
+    background-color: #000000;
+    color: #EB6E80;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+/* ========================================
+MOBILE
+======================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+        padding: 0 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+}
+
+    .problem-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .help-section {
+        margin: 40px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .header {
+        height: 68px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .logo h2 {
+        font-size: 17px;
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    .language-select {
+    padding: 7px 9px;
+    font-size: 12px;
+    min-width: 85px;
+    }
+
+    .login-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .report-btn,
+    .track-btn {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 240px;
+    }
+
+    .problem-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .problems-section,
+    .how-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+}
+/* ========================================
+   CITIZEN LOGIN MODAL
+======================================== */
+
+/* DARK OVERLAY */
+
+.modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+/* SHOW MODAL */
+
+.modal-overlay.active {
+    display: flex;
+}
+
+
+/* ========================================
+   LOGIN CARD
+======================================== */
+
+.login-modal {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    border-top: 5px solid #006A6A;
+
+    box-shadow: 0 15px 40px
+                rgba(0, 0, 0, 0.25);
+
+    animation: loginModalAppear 0.25s ease;
+}
+
+
+/* ========================================
+   MODAL ANIMATION
+======================================== */
+
+@keyframes loginModalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.close-modal {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background-color: #f1f1f1;
+
+    color: #555555;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease,
+                background-color 0.2s ease;
+}
+
+.close-modal:hover {
+    transform: scale(1.1);
+
+    background-color: #E24E42;
+
+    color: white;
+}
+
+
+/* ========================================
+   LOGIN ICON
+======================================== */
+
+.login-icon {
+    width: 62px;
+    height: 62px;
+
+    margin: 0 auto 15px;
+
+    background-color: #E9B000;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+/* ========================================
+   LOGIN HEADING
+======================================== */
+
+.login-modal h2 {
+    text-align: center;
+
+    color: #006A6A;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    text-align: center;
+
+    color: #555555;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   FORM GROUP
+======================================== */
+
+.login-form-group {
+    margin-bottom: 18px;
+}
+
+.login-form-group label {
+    display: block;
+
+    color: #000000;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 6px;
+}
+
+.login-form-group input {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.login-form-group input:focus {
+    border-color: #006A6A;
+
+    box-shadow: 0 0 0 3px
+                rgba(0, 106, 106, 0.12);
+}
+
+
+/* ========================================
+   LOCATION BUTTON
+======================================== */
+
+.location-btn {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    border: 2px solid #006A6A;
+
+    background-color: white;
+
+    color: #006A6A;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.location-btn:hover {
+    background-color: #006A6A;
+
+    color: white;
+
+    transform: scale(1.02);
+}
+
+
+/* ========================================
+   LOCATION STATUS
+======================================== */
+
+.location-status {
+    margin-top: 6px;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   CONTINUE BUTTON
+======================================== */
+
+.continue-btn {
+    width: 100%;
+
+    border: none;
+
+    background-color: #E24E42;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.continue-btn:hover {
+    transform: scale(1.02);
+
+    box-shadow: 0 6px 15px
+                rgba(0, 0, 0, 0.18);
+}
+
+
+/* ========================================
+   LOGIN NOTE
+======================================== */
+
+.login-note {
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 11px;
+
+    margin-top: 15px;
+}
+
+
+/* ========================================
+   MOBILE LOGIN MODAL
+======================================== */
+
+@media (max-width: 550px) {
+
+    .modal-overlay {
+        padding: 15px;
+    }
+
+    .login-modal {
+        padding: 30px 22px;
+    }
+
+    .login-modal h2 {
+        font-size: 25px;
+    }
+
+}

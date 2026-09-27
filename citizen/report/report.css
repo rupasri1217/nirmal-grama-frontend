@@ -1,0 +1,680 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f4;
+    color: #26332b;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    background: white;
+    min-height: 75px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-section img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo-section h1 {
+    font-size: 22px;
+    color: #006A6A;
+}
+
+.logo-section p {
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.language-btn,
+.back-btn {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.language-btn {
+    background: #e6f2f2;
+    color: #006A6A;
+}
+
+.back-btn {
+    background: #006A6A;
+    color: white;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.report-container {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 0 60px;
+}
+
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.page-heading h2 {
+    font-size: 32px;
+    color: #006A6A;
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: #6d766f;
+    font-size: 15px;
+}
+
+
+/* ========================================
+   REPORT CARD
+======================================== */
+
+.report-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+
+/* ========================================
+   STEP TITLE
+======================================== */
+
+.step-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background: #006A6A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.step-title h3 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.step-title p {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CATEGORY GRID
+======================================== */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.category-card {
+    border: 2px solid #e5e9e6;
+    background: white;
+    border-radius: 14px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+    border-color: #006A6A;
+}
+
+.category-card.selected {
+    border-color: #006A6A;
+    background: #e6f2f2;
+    box-shadow: 0 0 0 2px rgba(0,106,106,0.15);
+}
+
+.category-image {
+    width: 100%;
+    height: 110px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 9px;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-card span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #26332b;
+}
+
+.other-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 145px;
+}
+
+.other-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #f9e6ea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+
+/* ========================================
+   VOICE SECTION
+======================================== */
+
+.voice-section {
+    text-align: center;
+}
+
+.voice-button {
+    width: 180px;
+    height: 180px;
+    border: none;
+    border-radius: 50%;
+    background: #006A6A;
+    color: white;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    box-shadow: 0 8px 20px rgba(0,106,106,0.25);
+
+    transition: 0.2s;
+}
+
+.voice-button:hover {
+    transform: scale(1.04);
+}
+
+.voice-button.listening {
+    animation: pulse 1.2s infinite;
+    background: #E24E42;
+}
+
+.mic-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#voiceText {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.voice-status {
+    margin-top: 15px;
+    min-height: 20px;
+    color: #006A6A;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(226,78,66,0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 25px rgba(226,78,66,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(226,78,66,0);
+    }
+
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: #999;
+    font-size: 13px;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    flex: 1;
+}
+
+
+/* ========================================
+   TEXTAREA
+======================================== */
+
+#complaintText {
+    width: 100%;
+    border: 2px solid #e2e7e3;
+    border-radius: 12px;
+    padding: 15px;
+    resize: vertical;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+}
+
+#complaintText:focus {
+    border-color: #006A6A;
+}
+
+
+/* ========================================
+   PHOTO UPLOAD
+======================================== */
+
+.photo-upload {
+    min-height: 150px;
+
+    border: 2px dashed #b8c5bc;
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    text-align: center;
+    transition: 0.2s;
+}
+
+.photo-upload:hover {
+    border-color: #006A6A;
+    background: #f2fafa;
+}
+
+.camera-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.photo-upload strong {
+    font-size: 16px;
+}
+
+.photo-upload small {
+    color: #888;
+    margin-top: 5px;
+}
+
+.photo-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.photo-preview img {
+    max-width: 250px;
+    max-height: 220px;
+    border-radius: 12px;
+}
+
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.location-button {
+    width: 100%;
+    padding: 17px;
+
+    border: 2px solid #006A6A;
+    background: #eef7f7;
+
+    color: #006A6A;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.location-button:hover {
+    background: #e0f1f1;
+}
+
+.location-status {
+    text-align: center;
+    margin-top: 12px;
+    color: #006A6A;
+    font-size: 14px;
+    min-height: 18px;
+}
+
+
+/* ========================================
+   SUBMIT
+======================================== */
+
+.submit-section {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.submit-button {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #E24E42;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(226,78,66,0.2);
+}
+
+.submit-button:hover {
+    background: #cf4035;
+}
+
+.submit-section p {
+    margin-top: 10px;
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   SUCCESS MODAL
+======================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.success-modal {
+    width: 100%;
+    max-width: 420px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: auto auto 15px;
+
+    border-radius: 50%;
+
+    background: #e8f5f5;
+    color: #006A6A;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.success-modal h2 {
+    color: #006A6A;
+    margin-bottom: 10px;
+}
+
+.success-modal p {
+    color: #777;
+}
+
+.complaint-id {
+    margin: 18px 0;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #eef7f7;
+
+    color: #006A6A;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.save-message {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.track-button,
+.dashboard-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.track-button {
+    border: none;
+    background: #006A6A;
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-button {
+    border: 2px solid #006A6A;
+    background: white;
+    color: #006A6A;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 12px 4%;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .back-btn {
+        padding: 9px 10px;
+    }
+
+    .language-btn {
+        padding: 9px 10px;
+    }
+
+    .report-container {
+        width: 94%;
+        padding-top: 25px;
+    }
+
+    .page-heading h2 {
+        font-size: 27px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-image {
+        height: 100px;
+    }
+
+    .report-card {
+        padding: 18px;
+    }
+
+    .voice-button {
+        width: 155px;
+        height: 155px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .logo-section h1 {
+        font-size: 18px;
+    }
+
+    .logo-section p {
+        display: none;
+    }
+
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .page-heading h2 {
+        font-size: 24px;
+    }
+
+}

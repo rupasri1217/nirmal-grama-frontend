@@ -1,0 +1,617 @@
+/* ========================================
+   GLOBAL
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8faf9;
+    color: #263333;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.verify-header {
+
+    height: 78px;
+padding: 0 7%;
+background-color: #006A6A;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 4px solid #E24E42;
+
+}
+
+
+/* ========================================
+   LOGO SECTION
+======================================== */
+
+.logo-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+
+}
+
+
+.logo-section img {
+
+    width: 52px;
+
+    height: 52px;
+    border-radius: 8px;
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo-section h1 {
+
+    font-size: 22px;
+
+    color: white;
+
+    margin-bottom: 3px;
+
+}
+
+
+.logo-section p {
+
+    font-size: 13px;
+
+    color: white;
+
+}
+
+
+/* ========================================
+   OFFICER DETAILS
+======================================== */
+
+.header-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 4px;
+
+    flex-shrink: 0;
+
+}
+
+
+#officerName {
+
+    color: white;
+
+    font-weight: 700;
+
+}
+
+
+#officerArea {
+
+    color: white;
+
+    font-size: 13px;
+
+}
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.verify-container {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+}
+
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    font-size: 30px;
+    color: #006A6A;
+}
+
+.page-heading p {
+    margin-top: 7px;
+    color: #687878;
+}
+
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.back-btn {
+    border: 1px solid #006A6A;
+
+    background: #ffffff;
+    color: #006A6A;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: #006A6A;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   COMPLAINT CARD
+======================================== */
+
+.complaint-details-card {
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    border: 1px solid #dce7e5;
+
+    padding: 32px;
+
+    box-shadow:
+        0 6px 22px rgba(0, 106, 106, 0.08);
+}
+
+
+/* ========================================
+   COMPLAINT HEADER
+======================================== */
+
+.complaint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #e3ecea;
+}
+
+.label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+    color: #6b7b7b;
+
+    margin-bottom: 7px;
+}
+
+.complaint-header h3 {
+    font-size: 22px;
+    color: #006A6A;
+}
+
+
+/* ========================================
+   STATUS BADGE
+======================================== */
+
+.status-badge {
+    padding: 8px 16px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    background: #fff5cf;
+    color: #8a6500;
+
+    border: 1px solid #E9B000;
+}
+
+
+/* ========================================
+   DETAILS GRID
+======================================== */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #e3ecea;
+}
+
+.detail-item p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #263333;
+}
+
+
+/* ========================================
+   DETAIL SECTION
+======================================== */
+
+.detail-section {
+    padding: 25px 0;
+
+    border-bottom: 1px solid #e3ecea;
+}
+
+.description-box {
+    background: #f5fafa;
+
+    border-left: 4px solid #006A6A;
+
+    border-radius: 8px;
+
+    padding: 17px;
+
+    line-height: 1.7;
+
+    min-height: 80px;
+
+    color: #354545;
+}
+
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.location-box {
+    display: flex;
+
+    gap: 50px;
+
+    background: #f5fafa;
+
+    border: 1px solid #dce7e5;
+
+    border-radius: 8px;
+
+    padding: 18px;
+}
+
+.location-item span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #6b7b7b;
+
+    margin-bottom: 5px;
+}
+
+.location-item strong {
+    font-size: 15px;
+    color: #006A6A;
+}
+
+
+/* ========================================
+   PHOTO
+======================================== */
+
+.photo-container {
+    margin-top: 5px;
+}
+
+#complaintPhoto {
+    display: none;
+
+    max-width: 100%;
+    max-height: 400px;
+
+    border-radius: 10px;
+
+    border: 3px solid #EB6E80;
+
+    box-shadow:
+        0 4px 14px rgba(235, 110, 128, 0.15);
+}
+
+#noPhoto {
+    color: #6b7b7b;
+
+    background: #fff7f8;
+
+    border: 1px dashed #EB6E80;
+
+    padding: 25px;
+
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   ACTION SECTION
+======================================== */
+
+.action-section {
+    padding-top: 30px;
+}
+
+.action-section h3 {
+    font-size: 20px;
+
+    color: #006A6A;
+
+    margin-bottom: 7px;
+}
+
+.action-section > p {
+    color: #6b7b7b;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ========================================
+   ACTION BUTTONS
+======================================== */
+
+.action-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+}
+
+
+/* ========================================
+   REJECT BUTTON
+======================================== */
+
+.reject-btn {
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    border: 2px solid #E24E42;
+
+    background: #ffffff;
+
+    color: #E24E42;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.reject-btn:hover {
+    background: #E24E42;
+    color: #ffffff;
+
+    box-shadow:
+        0 4px 12px rgba(226, 78, 66, 0.2);
+}
+
+
+/* ========================================
+   VERIFY BUTTON
+======================================== */
+
+.verify-btn {
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    border: 2px solid #006A6A;
+
+    background: #006A6A;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.verify-btn:hover {
+    background: #005454;
+    border-color: #005454;
+
+    box-shadow:
+        0 4px 12px rgba(0, 106, 106, 0.22);
+}
+
+/* ========================================
+   RESOLVE BUTTON
+======================================== */
+
+.resolve-btn {
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    border: 2px solid #287528;
+
+    background: #287528;
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.resolve-btn:hover {
+    background: #216021;
+
+    border-color: #216021;
+
+    box-shadow:
+        0 4px 12px rgba(40, 117, 40, 0.22);
+}
+/* ========================================
+   NOTIFICATION
+======================================== */
+
+.notification {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #006A6A;
+
+    color: #ffffff;
+
+    padding: 15px 20px;
+
+    border-radius: 9px;
+
+    border-left: 5px solid #E9B000;
+
+    box-shadow:
+        0 6px 20px rgba(0, 106, 106, 0.22);
+
+    transform: translateY(100px);
+
+    opacity: 0;
+
+    transition: 0.3s;
+
+    pointer-events: none;
+
+    max-width: 380px;
+}
+
+.notification.show {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 750px) {
+
+    .verify-header {
+        padding: 16px 5%;
+    }
+
+    .verify-container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .page-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+    .logo-section img {
+    width: 44px;
+    height: 44px;
+}
+
+.logo-section h1 {
+    font-size: 18px;
+}
+
+.logo-section p {
+    font-size: 11px;
+}
+
+.header-right {
+    gap: 3px;
+}
+
+#officerName {
+    font-size: 13px;
+}
+
+#officerArea {
+    font-size: 11px;
+}
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-box {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .verify-btn,
+    .reject-btn,
+    .resolve-btn {
+        width: 100%;
+    }
+
+    .complaint-details-card {
+        padding: 22px;
+    }
+}

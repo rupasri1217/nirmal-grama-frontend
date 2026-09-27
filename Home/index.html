@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nirmal Grama | Public Grievance Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+<!-- =========================
+     HEADER
+========================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <img src="../images/logo-icon.png" alt="Nirmal Grama Logo">
+        </div>
+
+        <div class="logo-text">
+            <h2 data-en="Nirmal Grama" data-te="నిర్మల్ గ్రామం">
+                Nirmal Grama
+            </h2>
+
+            <p data-en="Public Grievance Portal"
+               data-te="ప్రజా ఫిర్యాదుల పోర్టల్">
+                Public Grievance Portal
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="header-buttons">
+
+       <!-- Language Dropdown -->
+
+    <select class="language-select" id="languageSelect" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="te">తెలుగు</option>
+    </select>
+
+
+        <!-- Officer Login -->
+
+        <button class="login-btn" id="loginBtn"
+                data-en="Officer Login"
+                data-te="అధికారి లాగిన్">
+
+            Officer Login
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================== -->
+
+<main>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="welcome-tag"
+                 data-en="Your voice matters"
+                 data-te="మీ సమస్య ముఖ్యం">
+
+                Your voice matters
+
+            </div>
+
+
+            <h1
+                data-en="Have a problem in your village?"
+                data-te="మీ గ్రామంలో సమస్య ఉందా?">
+
+                Have a problem in your village?
+
+            </h1>
+
+
+            <p class="hero-text"
+               data-en="Tell us about it. We'll send your complaint to the right local officer."
+               data-te="సమస్య గురించి మాకు తెలియజేయండి. మీ ఫిర్యాదును సరైన స్థానిక అధికారికి పంపిస్తాము.">
+
+                Tell us about it. We'll send your complaint
+                to the right local officer.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <!-- Report Button -->
+
+                <button class="report-btn" id="reportBtn">
+
+                    <span
+                        data-en="Report a Problem"
+                        data-te="సమస్యను తెలియజేయండి">
+
+                        Report a Problem
+
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- Track Button -->
+
+                <button class="track-btn" id="trackBtn"
+                        data-en="Track Complaint"
+                        data-te="ఫిర్యాదును ట్రాక్ చేయండి">
+
+                    Track Complaint
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             HERO IMAGE
+        ========================== -->
+
+        <div class="hero-image">
+
+            <!--
+                REPLACE THIS IMAGE URL LATER
+                WITH THE VILLAGE IMAGE YOU CHOOSE.
+            -->
+
+            <img
+                src="../images/Village-image.png"
+                alt="Village landscape">
+
+            
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROBLEMS SECTION
+    ========================== -->
+
+    <section class="problems-section">
+
+        <div class="section-heading">
+
+            <h2
+                data-en="What can you report?"
+                data-te="మీరు ఏమి తెలియజేయవచ్చు?">
+
+                What can you report?
+
+            </h2>
+
+            <p
+                data-en="Tell us about problems you see around your village."
+                data-te="మీ గ్రామంలో కనిపించే సమస్యలను మాకు తెలియజేయండి.">
+
+                Tell us about problems you see around your village.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="problem-grid">
+
+
+            <div class="problem-card">
+
+                <div class="problem-image">
+
+                    <!-- Replace with your road image -->
+
+                    <img
+                        src="../images/roads.png"
+                        alt="Road">
+
+                </div>
+
+                <h3
+                    data-en="Roads"
+                    data-te="రోడ్లు">
+
+                    Roads
+
+                </h3>
+
+            </div>
+
+
+
+            <div class="problem-card">
+
+                <div class="problem-image">
+
+                    <!-- Replace with your water image -->
+
+                    <img
+                        src="../images/water.png"
+                        alt="Water">
+
+                </div>
+
+                <h3
+                    data-en="Water"
+                    data-te="నీరు">
+
+                    Water
+
+                </h3>
+
+            </div>
+
+
+
+            <div class="problem-card">
+
+                <div class="problem-image">
+
+                    <!-- Replace with your garbage image -->
+
+                    <img
+                        src="../images/garbage.png"
+                        alt="Garbage">
+
+                </div>
+
+                <h3
+                    data-en="Garbage"
+                    data-te="చెత్త">
+
+                    Garbage
+
+                </h3>
+
+            </div>
+
+
+
+            <div class="problem-card">
+
+                <div class="problem-image">
+
+                    <!-- Replace with your street light image -->
+
+                    <img
+                        src="../images/street-lights.png"
+                        alt="Street">
+
+                </div>
+
+                <h3
+                    data-en="Street Lights"
+                    data-te="వీధి దీపాలు">
+
+                    Street Lights
+
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <h2
+                data-en="How it works"
+                data-te="ఇది ఎలా పనిచేస్తుంది">
+
+                How it works
+
+            </h2>
+
+            <p
+                data-en="Three simple steps."
+                data-te="మూడు సులభమైన దశలు.">
+
+                Three simple steps.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="steps">
+
+
+            <!-- STEP 1 -->
+
+            <div class="step-card">
+
+                <div class="step-icon">
+                    📝
+                </div>
+
+                <h3
+                    data-en="Tell Us"
+                    data-te="చెప్పండి">
+
+                    Tell Us
+
+                </h3>
+
+                <p
+                    data-en="Describe the problem in your area."
+                    data-te="మీ ప్రాంతంలోని సమస్యను వివరించండి.">
+
+                    Describe the problem in your area.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- STEP 2 -->
+
+            <div class="step-card">
+
+
+                <div class="step-icon">
+                    📍
+                </div>
+
+                <h3
+                    data-en="We Send It"
+                    data-te="మేము పంపిస్తాము">
+
+                    We Send It
+
+                </h3>
+
+                <p
+                    data-en="We send it to the right local officer."
+                    data-te="సరైన స్థానిక అధికారికి పంపిస్తాము.">
+
+                    We send it to the right local officer.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- STEP 3 -->
+
+            <div class="step-card">
+
+
+                <div class="step-icon">
+                    ✓
+                </div>
+
+                <h3
+                    data-en="Track It"
+                    data-te="ట్రాక్ చేయండి">
+
+                    Track It
+
+                </h3>
+
+                <p
+                    data-en="Check your complaint status anytime."
+                    data-te="మీ ఫిర్యాదు స్థితిని ఎప్పుడైనా తెలుసుకోండి.">
+
+                    Check your complaint status anytime.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HELP SECTION
+    ========================== -->
+
+    <section class="help-section">
+
+        <div>
+
+            <h2
+                data-en="Need help reporting a problem?"
+                data-te="సమస్యను తెలియజేయడానికి సహాయం కావాలా?">
+
+                Need help reporting a problem?
+
+            </h2>
+
+            <p
+                data-en="You can report problems related to roads, water, garbage, street lights and more."
+                data-te="రోడ్లు, నీరు, చెత్త, వీధి దీపాలు మరియు ఇతర సమస్యలను తెలియజేయవచ్చు.">
+
+                You can report problems related to roads,
+                water, garbage, street lights and more.
+
+            </p>
+
+        </div>
+
+
+        <button id="helpReportBtn"
+                data-en="Report Now →"
+                data-te="ఇప్పుడే తెలియజేయండి →">
+
+            Report Now →
+
+        </button>
+
+    </section>
+<!-- =========================
+     CITIZEN LOGIN MODAL
+========================== -->
+
+<div class="modal-overlay" id="citizenLoginModal">
+
+    <div class="login-modal">
+
+        <!-- CLOSE BUTTON -->
+
+        <button class="close-modal"
+                id="closeCitizenLogin">
+
+            ×
+
+        </button>
+
+
+        <!-- LOGIN ICON -->
+
+        <div class="login-icon">
+            👤
+        </div>
+
+
+        <!-- HEADING -->
+
+        <h2
+            data-en="Citizen Login"
+            data-te="పౌర లాగిన్">
+
+            Citizen Login
+
+        </h2>
+
+
+        <p class="login-subtitle"
+           data-en="Enter your details to continue."
+           data-te="కొనసాగించడానికి మీ వివరాలను నమోదు చేయండి.">
+
+            Enter your details to continue.
+
+        </p>
+
+
+        <!-- NAME -->
+
+        <div class="login-form-group">
+
+            <label
+                for="citizenName"
+                data-en="Your Name"
+                data-te="మీ పేరు">
+
+                Your Name
+
+            </label>
+
+            <input
+                type="text"
+                id="citizenName"
+                placeholder="Enter your name"
+                data-placeholder-en="Enter your name"
+                data-placeholder-te="మీ పేరు నమోదు చేయండి">
+
+        </div>
+
+
+        <!-- MOBILE NUMBER -->
+
+        <div class="login-form-group">
+
+            <label
+                for="citizenMobile"
+                data-en="Mobile Number"
+                data-te="మొబైల్ నంబర్">
+
+                Mobile Number
+
+            </label>
+
+            <input
+                type="tel"
+                id="citizenMobile"
+                placeholder="Enter your mobile number"
+                data-placeholder-en="Enter your mobile number"
+                data-placeholder-te="మీ మొబైల్ నంబర్ నమోదు చేయండి"
+                maxlength="10">
+
+        </div>
+        <!-- CONTINUE -->
+
+        <button
+            type="button"
+            class="continue-btn"
+            id="citizenContinueBtn"
+            data-en="Continue"
+            data-te="కొనసాగించండి">
+
+            Continue
+
+        </button>
+
+        <!-- NOTE -->
+
+            <p class="login-note"
+            data-en="Your information is used only to help process your complaints."
+            data-te="మీ ఫిర్యాదులను నిర్వహించడానికి మాత్రమే మీ సమాచారాన్ని ఉపయోగిస్తాము.">
+
+            Your information is used only to help process your complaints.
+
+            </p>
+
+        </div>
+
+    </div>
+
+<!-- ========================================
+     OFFICER LOGIN MODAL
+========================================= -->
+
+<div class="modal-overlay" id="officerLoginModal">
+
+    <div class="login-modal">
+
+        <!-- Close Button -->
+
+        <button
+            class="close-modal"
+            id="closeOfficerLogin">
+
+            &times;
+
+        </button>
+
+
+        <!-- Icon -->
+
+        <div class="login-icon">
+            👨‍💼
+        </div>
+
+
+        <!-- Heading -->
+
+        <h2
+            data-en="Officer Login"
+            data-te="అధికారి లాగిన్">
+
+            Officer Login
+
+        </h2>
+
+
+        <p
+            data-en="Enter your details to continue."
+            data-te="కొనసాగడానికి మీ వివరాలను నమోదు చేయండి.">
+
+            Enter your details to continue.
+
+        </p>
+
+
+        <!-- Officer Name -->
+
+        <div class="login-form-group">
+
+            <label
+                for="officerLoginName"
+                data-en="Full Name"
+                data-te="పూర్తి పేరు">
+
+                Full Name
+
+            </label>
+
+            <input
+                type="text"
+                id="officerLoginName"
+                placeholder="Enter your name"
+                data-placeholder-en="Enter your name"
+                data-placeholder-te="మీ పేరు నమోదు చేయండి">
+
+        </div>
+
+
+        <!-- Officer Email -->
+
+        <div class="login-form-group">
+
+            <label
+                for="officerLoginEmail"
+                data-en="Email Address"
+                data-te="ఇమెయిల్ చిరునామా">
+
+                Email Address
+
+            </label>
+
+            <input
+                type="email"
+                id="officerLoginEmail"
+                placeholder="Enter your email"
+                data-placeholder-en="Enter your email"
+                data-placeholder-te="మీ ఇమెయిల్ నమోదు చేయండి">
+
+        </div>
+
+
+        <!-- Officer Area -->
+
+        <div class="login-form-group">
+
+            <label
+                for="officerLoginArea"
+                data-en="Your Area"
+                data-te="మీ ప్రాంతం">
+
+                Your Area
+
+            </label>
+
+            <input
+                type="text"
+                id="officerLoginArea"
+                placeholder="Enter your area"
+                data-placeholder-en="Enter your area"
+                data-placeholder-te="మీ ప్రాంతాన్ని నమోదు చేయండి">
+
+        </div>
+
+
+        <!-- Continue -->
+
+        <button
+            class="continue-btn"
+            id="officerContinueBtn"
+            data-en="Continue"
+            data-te="కొనసాగించండి">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="footer">
+
+    <p
+        data-en="© 2026 Nirmal Grama"
+        data-te="© 2026 నిర్మల్ గ్రామం">
+
+        © 2026 Nirmal Grama
+
+    </p>
+
+    <p
+        data-en="Making local problems easier to report."
+        data-te="స్థానిక సమస్యలను సులభంగా తెలియజేయడానికి.">
+
+        Making local problems easier to report.
+
+    </p>
+
+</footer>
+
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+```
+
+</body>
+
+</html>

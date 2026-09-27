@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nirmal Grama - Report a Problem</title>
+
+    <link rel="stylesheet" href="report.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
+
+    <header class="header">
+
+        <div class="logo-section">
+
+            <img src="../../images/logo-icon.png" alt="Nirmal Grama Logo">
+
+            <div>
+                <h1>Nirmal Grama</h1>
+                <p data-en="Clean Village, Happy Village"
+                   data-te="పరిశుభ్రమైన గ్రామం, సంతోషకరమైన గ్రామం">
+                    Clean Village, Happy Village
+                </p>
+            </div>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button id="languageBtn" class="language-btn">
+                తెలుగు
+            </button>
+
+            <button id="backBtn" class="back-btn"
+                    data-en="← Dashboard"
+                    data-te="← డాష్‌బోర్డ్">
+                ← Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============================= -->
+    <!-- MAIN -->
+    <!-- ============================= -->
+
+    <main class="report-container">
+
+        <!-- PAGE TITLE -->
+
+        <section class="page-heading">
+
+            <h2 data-en="Report a Problem"
+                data-te="సమస్యను నివేదించండి">
+                Report a Problem
+            </h2>
+
+            <p data-en="Tell us about a problem in your village"
+               data-te="మీ గ్రామంలోని సమస్య గురించి మాకు చెప్పండి">
+                Tell us about a problem in your village
+            </p>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- STEP 1 : CATEGORY -->
+        <!-- ============================= -->
+
+        <section class="report-card">
+
+            <div class="step-title">
+
+                <span class="step-number">1</span>
+
+                <div>
+                    <h3 data-en="What is the problem?"
+                        data-te="సమస్య ఏమిటి?">
+                        What is the problem?
+                    </h3>
+
+                    <p data-en="Tap a picture"
+                       data-te="చిత్రాన్ని ఎంచుకోండి">
+                        Tap a picture
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <button class="category-card" data-category="Road">
+
+                    <div class="category-image">
+                        <img src="../../images/roads.png" alt="Road">
+                    </div>
+
+                    <span data-en="Road"
+                          data-te="రోడ్డు">
+                        Road
+                    </span>
+
+                </button>
+
+
+                <button class="category-card" data-category="Water">
+
+                    <div class="category-image">
+                        <img src="../../images/water.png" alt="Water">
+                    </div>
+
+                    <span data-en="Water"
+                          data-te="నీరు">
+                        Water
+                    </span>
+
+                </button>
+
+
+                <button class="category-card" data-category="Garbage">
+
+                    <div class="category-image">
+                        <img src="../../images/garbage.png" alt="Garbage">
+                    </div>
+
+                    <span data-en="Garbage"
+                          data-te="చెత్త">
+                        Garbage
+                    </span>
+
+                </button>
+
+
+                <button class="category-card" data-category="Street Light">
+
+                    <div class="category-image">
+                        <img src="../../images/street-lights.png" alt="Street Light">
+                    </div>
+
+                    <span data-en="Street Light"
+                          data-te="వీధి దీపం">
+                        Street Light
+                    </span>
+
+                </button>
+
+
+                <button class="category-card other-category"
+                        data-category="Other">
+
+                    <div class="other-icon">
+                        ➕
+                    </div>
+
+                    <span data-en="Other"
+                          data-te="ఇతర">
+                        Other
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- STEP 2 : VOICE -->
+        <!-- ============================= -->
+
+        <section class="report-card">
+
+            <div class="step-title">
+
+                <span class="step-number">2</span>
+
+                <div>
+                    <h3 data-en="Tell us what happened"
+                        data-te="ఏం జరిగిందో చెప్పండి">
+                        Tell us what happened
+                    </h3>
+
+                    <p data-en="You can speak instead of typing"
+                       data-te="టైప్ చేయకుండా మాట్లాడవచ్చు">
+                        You can speak instead of typing
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="voice-section">
+
+                <button id="voiceBtn" class="voice-button">
+
+                    <span class="mic-icon">🎤</span>
+
+                    <span id="voiceText"
+                          data-en="Tap & Speak"
+                          data-te="నొక్కి మాట్లాడండి">
+                        Tap & Speak
+                    </span>
+
+                </button>
+
+                <p id="voiceStatus" class="voice-status"></p>
+
+            </div>
+
+
+            <div class="or-divider">
+
+                <span data-en="OR"
+                      data-te="లేదా">
+                    OR
+                </span>
+
+            </div>
+
+
+            <textarea
+                id="complaintText"
+                rows="5"
+                data-placeholder-en="Type your complaint here..."
+                data-placeholder-te="మీ సమస్యను ఇక్కడ టైప్ చేయండి..."
+                placeholder="Type your complaint here...">
+            </textarea>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- STEP 3 : PHOTO -->
+        <!-- ============================= -->
+
+        <section class="report-card">
+
+            <div class="step-title">
+
+                <span class="step-number">3</span>
+
+                <div>
+                    <h3 data-en="Add a photo"
+                        data-te="ఫోటో జోడించండి">
+                        Add a photo
+                    </h3>
+
+                    <p data-en="Optional"
+                       data-te="ఐచ్ఛికం">
+                        Optional
+                    </p>
+                </div>
+
+            </div>
+
+
+            <label for="photoInput" class="photo-upload">
+
+                <span class="camera-icon">📷</span>
+
+                <strong data-en="Take / Choose Photo"
+                        data-te="ఫోటో తీయండి / ఎంచుకోండి">
+                    Take / Choose Photo
+                </strong>
+
+                <small data-en="You can add a photo of the problem"
+                       data-te="సమస్య యొక్క ఫోటోను జోడించవచ్చు">
+                    You can add a photo of the problem
+                </small>
+
+            </label>
+
+            <input
+                type="file"
+                id="photoInput"
+                accept="image/*"
+                capture="environment"
+                hidden
+            >
+
+            <div id="photoPreview" class="photo-preview"></div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- STEP 4 : LOCATION -->
+        <!-- ============================= -->
+
+        <section class="report-card">
+
+            <div class="step-title">
+
+                <span class="step-number">4</span>
+
+                <div>
+                    <h3 data-en="Where is the problem?"
+                        data-te="సమస్య ఎక్కడ ఉంది?">
+                        Where is the problem?
+                    </h3>
+
+                    <p data-en="We need the location to help you"
+                       data-te="మీకు సహాయం చేయడానికి స్థానం అవసరం">
+                        We need the location to help you
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button id="locationBtn" class="location-button">
+
+                <span>📍</span>
+
+                <span data-en="Use My Location"
+                      data-te="నా స్థానాన్ని ఉపయోగించండి">
+                    Use My Location
+                </span>
+
+            </button>
+
+
+            <p id="locationStatus" class="location-status"></p>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- SUBMIT -->
+        <!-- ============================= -->
+
+        <section class="submit-section">
+
+            <button id="submitComplaint" class="submit-button">
+
+                <span>✅</span>
+
+                <span data-en="SEND COMPLAINT"
+                      data-te="ఫిర్యాదును పంపండి">
+                    SEND COMPLAINT
+                </span>
+
+            </button>
+
+            <p data-en="Your complaint will be sent to the village authorities"
+               data-te="మీ ఫిర్యాదు గ్రామ అధికారులకు పంపబడుతుంది">
+                Your complaint will be sent to the village authorities
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- SUCCESS MODAL -->
+    <!-- ============================= -->
+
+    <div id="successModal" class="modal-overlay">
+
+        <div class="success-modal">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2 data-en="Complaint Submitted!"
+                data-te="ఫిర్యాదు పంపబడింది!">
+                Complaint Submitted!
+            </h2>
+
+            <p data-en="Your Complaint ID is"
+               data-te="మీ ఫిర్యాదు ID">
+                Your Complaint ID is
+            </p>
+
+            <div id="complaintIdDisplay" class="complaint-id">
+                NG-2026-00001
+            </div>
+
+            <p class="save-message"
+               data-en="Please save this ID to track your complaint."
+               data-te="మీ ఫిర్యాదును ట్రాక్ చేయడానికి ఈ IDని భద్రపరచండి.">
+                Please save this ID to track your complaint.
+            </p>
+
+            <button id="trackComplaintBtn"
+                    class="track-button"
+                    data-en="Track Complaint"
+                    data-te="ఫిర్యాదును ట్రాక్ చేయండి">
+                Track Complaint
+            </button>
+
+            <button id="dashboardBtn"
+                    class="dashboard-button"
+                    data-en="Go to Dashboard"
+                    data-te="డాష్‌బోర్డ్‌కు వెళ్లండి">
+                Go to Dashboard
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="report.js"></script>
+
+</body>
+</html>

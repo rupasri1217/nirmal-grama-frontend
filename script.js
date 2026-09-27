@@ -331,7 +331,7 @@ if (citizenContinueBtn) {
             // ====================================
 
             window.location.href =
-                "../citizen/dashboard/citizen-dashboard.html";
+                "citizen/dashboard/citizen-dashboard.html";
 
         }
     );
@@ -676,7 +676,7 @@ if (officerContinueBtn) {
             // ====================================
 
             window.location.href =
-                "../officer/dashboard/officer-dashboard.html";
+                "officer/dashboard/officer-dashboard.html";
 
         }
     );
